@@ -47,3 +47,7 @@ docker system dfでコンテナの状況を確認、docker ps で現在使用中
 
 -docker login
 docker hubの認証
+
+https://blowup-bbs.com/docker-ubuntu-python-jupyter/
+
+https://qiita.com/shngt/items/51102aeb81834d0d3d7a
