@@ -1,0 +1,49 @@
+サーバ機器--CPU
+		|-メモリ
+		|-ストレージ
+		|-UPS(無停電電源装置)
+		|-KVMスイッチ（複数のサーバを制御するスイッチ）
+
+CPU：Center Processing Unit　演算処理を行う電子回路部品
+	動作周波数が大きいほど演算能力が高くなり、温度上昇も激しくなる。
+
+メモリ：CPUが直接アクセスできる主記憶装置。データ容量の大きい/データ転送速度の高速なほど高性能。
+
+ストレージ：データベースに書きこまれたデータの永続データを保存するデバイス
+		ストーレジの障害はデータ損失につながるため冗長化必須
+
+
+dockerメモ：hello world 
+docker container run ubuntu:latest /bin/echo 'hello'
+
+git bash->gitのpathが通ってるのでそこにdockerで弄るexeファイルがないってエラー表示される->パス変換が必要
+cmd->hello を帰ってくる
+
+docker run "hello-world"：サンプルコンテナの軌道
+git bash->普通に使える
+cmd->使える
+
+git bashを今後使うならばパス変換が必要かも　https://qiita.com/amanoese/items/8a19548d5e9dc2e22959
+
+
+
+DockerImagesはコンテナのひな型
+
+コマンド https://qiita.com/mmizum/items/bb4a745b8613136c7560
+-docker containr run イメージ名 実行コマンド
+ex)docker container run ubuntu:latest /bin/echo 'hello'
+
+-docker version
+バージョン確認
+
+-docker system info
+コンテナ数やストレージドライバの種類等を確認
+
+-docker system df
+dockerが使用しているディスク利用状況（imagesがいくつあるか、conainersがいくつあるか）等を確認
+
+-docker rm コンテナID
+docker system dfでコンテナの状況を確認、docker ps で現在使用中か確認,docker ps -aでコンテナIDを確認し削除する。
+
+-docker login
+docker hubの認証
